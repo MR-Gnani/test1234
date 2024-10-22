@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="1.5">
+  <TypeDefinition url="..\default_typedef.xml"/>
+  <Form id="base_emp" left="0" top="0" width="760" height="645" titletext="New Form">
+    <Layouts>
+      <Layout>
+        <Button id="btn_search" taborder="0" text="search" left="46.05%" top="17" right="45.92%" height="25"/>
+        <Button id="btn_add" taborder="1" text="add" left="54.61%" top="17" right="37.11%" height="25"/>
+        <Button id="btn_del" taborder="2" text="del" left="63.29%" top="17" right="28.68%" height="25"/>
+        <Button id="btn_save" taborder="3" text="save" left="71.71%" top="17" right="20%" height="25"/>
+        <Edit id="edit_name" taborder="4" left="32.11%" top="21" right="61.05%" height="19" style="align:left middle;"/>
+        <Static id="st_title" taborder="5" text="Employee Management" left="2.11%" top="21" right="76.05%" height="15" style="background:lightyellow;align:center middle;font:bold 10 ta,Tahoma;"/>
+        <Grid id="Grid00" taborder="6" left="2.11%" top="61" right="2.11%" height="123" binddataset="ds_emp" autoenter="select" autofittype="col">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Col size="80"/>
+                <Col size="80"/>
+                <Col size="80"/>
+                <Col size="80"/>
+                <Col size="80"/>
+                <Col size="80"/>
+                <Col size="80"/>
+                <Col size="80"/>
+                <Col size="80"/>
+              </Columns>
+              <Rows>
+                <Row band="head" size="24"/>
+                <Row band="body" size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell col="0" disptype="normal" text="EMP_ID"/>
+                <Cell col="1" disptype="normal" text="FULL_NAME"/>
+                <Cell col="2" disptype="normal" text="DEPT_ID"/>
+                <Cell col="3" disptype="normal" text="RANK"/>
+                <Cell col="4" disptype="normal" text="GENDER"/>
+                <Cell col="5" disptype="normal" text="HIRE_DATE"/>
+                <Cell col="6" disptype="normal" text="MARRIED"/>
+                <Cell col="7" disptype="normal" text="EMAIL"/>
+                <Cell col="8" disptype="normal" text="EMP_MEMO"/>
+              </Band>
+              <Band id="body">
+                <Cell col="0" disptype="normal" text="bind:EMP_ID"/>
+                <Cell col="1" disptype="normal" text="bind:FULL_NAME"/>
+                <Cell col="2" disptype="normal" text="bind:DEPT_ID"/>
+                <Cell col="3" disptype="normal" text="bind:RANK"/>
+                <Cell col="4" disptype="normal" text="bind:GENDER"/>
+                <Cell col="5" disptype="normal" text="bind:HIRE_DATE"/>
+                <Cell col="6" disptype="normal" text="bind:MARRIED"/>
+                <Cell col="7" disptype="normal" text="bind:EMAIL"/>
+                <Cell col="8" disptype="normal" text="bind:EMP_MEMO"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_dept">
+        <ColumnInfo>
+          <Column id="CODE" type="STRING" size="256"/>
+          <Column id="VALUE" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="CODE">01</Col>
+            <Col id="VALUE">Human Resources</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_rank">
+        <ColumnInfo>
+          <Column id="CODE" type="STRING" size="256"/>
+          <Column id="VALUE" type="STRING" size="256"/>
+        </ColumnInfo>
+      </Dataset>
+      <Dataset id="ds_gender">
+        <ColumnInfo>
+          <Column id="CODE" type="STRING" size="256"/>
+          <Column id="VALUE" type="STRING" size="256"/>
+        </ColumnInfo>
+      </Dataset>
+      <Dataset id="ds_emp">
+        <ColumnInfo>
+          <Column id="EMP_ID" type="INT" size="256"/>
+          <Column id="FULL_NAME" type="STRING" size="256"/>
+          <Column id="DEPT_ID" type="INT" size="256"/>
+          <Column id="RANK" type="STRING" size="256"/>
+          <Column id="GENDER" type="STRING" size="256"/>
+          <Column id="HIRE_DATE" type="DATETIME" size="256"/>
+          <Column id="MARRIED" type="STRING" size="256"/>
+          <Column id="EMAIL" type="STRING" size="256"/>
+          <Column id="EMP_MEMO" type="STRING" size="256"/>
+        </ColumnInfo>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.0"><![CDATA[]]></Script>
+  </Form>
+</FDL>

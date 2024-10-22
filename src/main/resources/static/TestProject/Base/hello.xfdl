@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="1.5">
+  <TypeDefinition url="..\default_typedef.xml"/>
+  <Form id="hello" left="0" top="0" width="1024" height="768" titletext="New Form" onclick="btn_hello_onclick">
+    <Layouts>
+      <Layout>
+        <Button id="btn_hello" taborder="0" text="hello" left="1.86%" top="16" right="88.28%" height="51" onclick="btn_hello_onclick" style="color:black;"/>
+      </Layout>
+    </Layouts>
+    <InitValue>
+      <Button id="btn_hello" text="hello"/>
+    </InitValue>
+    <Script type="xscript5.0"><![CDATA[
+this.btn_hello_onclick = function(obj:Form, e:nexacro.ClickEventInfo)
+{
+	this.alert("Hello");
+	alert(this.btn_hello.text);
+	application.alert(obj.text);
+}
+
+]]></Script>
+  </Form>
+</FDL>
